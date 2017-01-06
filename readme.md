@@ -36,3 +36,19 @@ execute migrations
 python manage.py migrate
 
 note: after making any changes in models run step 7 and 8
+
+
+
+Git commands
+
+(1) To check new changes
+git status
+
+(2)to add all files for commit
+git add *
+
+(3)To commit a added code 
+git commit -m "commit msg"
+
+(4)push the code to github.com
+git push
