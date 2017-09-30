@@ -8,8 +8,8 @@ class Employee(models.Model):
 	designation = models.CharField(max_length=50,null=True,blank=True)
 
 	def __str__(self):
-		return self.first_name
+		return self.first_name 
 
-#class Detail(models.Model):
+#	class Detail(models.Model):
 #	Employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
 
