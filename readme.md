@@ -2,26 +2,28 @@ Some Basic Commands for Using Django in Windows 7
 
 cd 'directory name' : change directory
 mkdir 'directory name' : make directory
-Installing Django: pip install django~=1.7.2 ('~' means it will install nearly version and '==' for exactly that)
-Create Virtual Enviroment : python -m venv 'name of environment'
+install virtualenv and virtualwrapper : pip install virtualenvwrapper-win (https://docs.djangoproject.com/en/1.10/howto/windows/)
+first install virtual environment: pip install virtualenv
+Create Virtual Enviroment : virtualenv 'name of environment' (http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 Activate Virtual Mode : 'Virtual env name'\Scripts\activate
 Deactivate Virtual Mode : deactivate
-
+Installing Django: pip install django~=1.7.2 ('~' means it will install nearly version and '==' for exactly that)
+Check Django Version:  First activate virtual environment and type command "pip show django" (it will show installed django version)
 
 Step(1)
-Start new project:
-django-admin startproject crud_app2 .
+Start new project: before create one folder for project then write below command
+django-admin startproject crud_app2 .(don't forgect to add this "." stands for)
 
 step(2)
 Start new app:
 python manage.py startapp company
 
 step(3)
-Run initial migration
+Run initial migration:
 python manage.py migrate
 
 step(4)
-create a superuser
+create a superuser:
 python manage.py createsuperuser
 username-admin
 pass-admin
@@ -42,11 +44,10 @@ generate migrations file to update database
 python manage.py makemigrations
 
 step(8)
-execute migrations 
+execute migrations-apply those changes to the database
 python manage.py migrate
 
 note: after making any changes in models run step 7 and 8
-
 
 
 Git commands
