@@ -1,11 +1,19 @@
-Basic CRUD Application using Python/Django
+Here, we will create one basic crud(create, read, update) application using Django 5.0.2
 
-Here, we will create one basic crud(create, read, update, delete) application using Django 1.7.2
+First install all dependencies in python virtual environment using below command:
 
-Application Flow
+`pip install -r requirements.txt`
 
-1) Create Django Project(crud_app2)
-2) Create application(company) inside crud_app2
-3) Create 5 views in company application for 4 operations(create, read, update, delete) and 1 view for reading data from sqllite(default) database and displaying as a employee name list
-4) Create urls.py file, templates as per given in this example
-5) Congratulations, see your django's first crud application output using python manage.py runserver
+Application Flow:
+
+1) Create Django Project(customer_management).
+2) Create application(customer) inside customer_management.
+3) customer app has multiple views like CustomerListView, CustomerDetailView, RegisterCustomerView, ChoosePlanView. 
+4) Use below urls for:
+To register customer:
+`http://127.0.0.1:8000/register/`
+To see all registered customer:
+`http://127.0.0.1:8000/`
+5) Congratulations, see your django's first application output using python manage.py runserver.
+
+Please check Project screenshots for reference present in Scx

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer List</title>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Assigned Mobile Number</th>
+                <th>Plan</th>
+                <th>Renewal Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.dob }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.number }}</td>
+                <td>{{ customer.assigned_mobile_number }}</td>
+                <td>{% if customer.subscription_set.first %}{{ customer.subscription_set.first.plan.name }}{% else %}No Plan{% endif %}</td>
+                <td>{% if customer.subscription_set.first %}{{ customer.subscription_set.first.renewal_date }}{% else %}N/A{% endif %}</td>
+                <td><a href="{% url 'customer_detail' pk=customer.id %}">Details</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

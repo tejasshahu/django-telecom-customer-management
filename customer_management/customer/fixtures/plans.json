@@ -1,0 +1,32 @@
+[
+  {
+    "model": "customer.plan",
+    "pk": 1,
+    "fields": {
+      "name": "Platinum365",
+      "cost": "499.00",
+      "validity": 365,
+      "status": "Active"
+    }
+  },
+  {
+    "model": "customer.plan",
+    "pk": 2,
+    "fields": {
+      "name": "Gold180",
+      "cost": "299.00",
+      "validity": 180,
+      "status": "Active"
+    }
+  },
+  {
+    "model": "customer.plan",
+    "pk": 3,
+    "fields": {
+      "name": "Silver90",
+      "cost": "199.00",
+      "validity": 90,
+      "status": "Active"
+    }
+  }
+]

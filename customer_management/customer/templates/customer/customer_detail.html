@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Detail</title>
+</head>
+<body>
+    <h1>Customer Detail</h1>
+    <p>Name: {{ customer.name }}</p>
+    <p>DOB: {{ customer.dob }}</p>
+    <p>Email: {{ customer.email }}</p>
+    <p>Aadhar Number: {{ customer.number }}</p>
+    <p>Registration Date: {{ customer.registration_date }}</p>
+    <p>Assigned Mobile Number: {{ customer.assigned_mobile_number }}</p>
+    <p>Plan: {% if subscription %}{{ subscription.plan.name }}{% else %}No Plan{% endif %}</p>
+    <p>Renewal Date: {% if subscription %}{{ subscription.renewal_date }}{% else %}N/A{% endif %}</p></body>
+    <a href="{% url 'choose_plan' customer_id=customer.id %}">Modify Plan</a>
+</html>
+
